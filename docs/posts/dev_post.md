@@ -3,7 +3,7 @@ title: Create Cross-Platform Python CLI Tools Without Python
 published: false
 description: A simple test article
 tags: 'productivity, beginners, test'
-cover_image: ./assets/cat.jpg
+cover_image: ../static/python.png
 canonical_url: null
 ---
 
