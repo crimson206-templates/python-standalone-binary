@@ -5,6 +5,7 @@ description: Learn how to distribute Python CLI tools as standalone executables 
 tags: 'python, cli, devops, tutorial'
 cover_image: ../static/python.png
 canonical_url: null
+id: 2576404
 ---
 
 Want to share your Python CLI tool with non-technical users? Let's make it simple - no Python installation required!
