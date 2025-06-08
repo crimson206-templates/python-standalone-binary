@@ -1,14 +1,4 @@
----
-title: Standalone Python CLI Distribution Made Simple
-published: false
-description: Learn how to distribute Python CLI tools as standalone executables - no Python installation required for end users. A practical template for cross-platform binary distribution.
-tags: python, cli, devops, tutorial
-cover_image: ../static/python.png
-canonical_url: null
-id: 2576255
----
-
-Want to share your Python CLI tool with non-technical users? Let's make it simple - no Python installation required!
+# Standalone Python CLI Distribution
 
 ## Why Standalone Binaries?
 
@@ -16,14 +6,10 @@ Traditional Python CLI tools depend on the Python environment present during ins
 
 ## Quick Solution
 
-I've created a template repository that handles all the complexity for you:
-[python-standalone-binary](https://github.com/crimson206-templates/python-standalone-binary)
-
-This template provides:
+This repository provides:
 - A simple example CLI implementation
 - Installation scripts
 - Release workflow
-- Cross-platform support (Linux, Windows, macOS)
 
 With these tools, you can easily distribute standalone Python CLI binaries on GitHub using a simple installation command:
 
@@ -33,7 +19,7 @@ curl -fsSL https://raw.githubusercontent.com/{user}/{repo}/main/scripts/install.
 
 ## Try Our Example
 
-Want to see it in action? Test our example CLI with these commands:
+Test our example CLI with these commands:
 
 ### Linux / macOS
 ```bash
@@ -60,7 +46,7 @@ To deploy this example in your own repository:
 
 1. Fork the repository:
    ```bash
-   gh repo fork crimson206-templates/python-standalone-binary
+   gh repo fork crimson206-templates/devto-github-template
    ```
 
 2. Create a release:
@@ -73,11 +59,3 @@ To deploy this example in your own repository:
    # Linux/macOS
    curl -fsSL https://raw.githubusercontent.com/{user}/python-standalone-binary/main/scripts/install.sh | bash
    ```
-
-## Resources
-
-- [Template Repository](https://github.com/crimson206-templates/python-standalone-binary)
-- [Documentation](https://github.com/crimson206-templates/python-standalone-binary#documentation)
-- [Example Implementation](https://github.com/crimson206-templates/python-standalone-binary/tree/main/src/example_cli)
-
-Ready to make your Python CLI more accessible? Check out the [template repository](https://github.com/crimson206-templates/python-standalone-binary) and start building!
