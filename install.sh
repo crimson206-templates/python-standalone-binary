@@ -35,9 +35,9 @@ case ${OS} in
     *)
         EXT=""
         ;;
-esacAA
+esac
 
-# Construct binary name with OS and architectureW
+# Construct binary name with OS and architecture
 BINARY_FILENAME="${BINARY_NAME}-${OS}-${ARCH}${EXT}"
 
 # Create temporary directory
