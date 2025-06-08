@@ -1,0 +1,4 @@
+pyinstaller==6.5.0
+hatchling==1.21.1
+build==1.0.3
+cleo==2.1.0 

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "example-cli"
+version = "0.1.0"
+description = "Example CLI module that can be built as standalone binary"
+requires-python = ">=3.8"
+dependencies = [
+    "cleo>=2.1.0",
+]
+
+[project.scripts]
+example-cli = "example_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/example_cli"] 
