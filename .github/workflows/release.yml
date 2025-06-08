@@ -16,17 +16,17 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
+          - os: ubuntu-18.04  
             artifact_name: example-cli-linux-amd64
             asset_name: example-cli-linux-amd64
-          - os: ubuntu-latest
+          - os: ubuntu-18.04  
             artifact_name: example-cli-linux-arm64
             asset_name: example-cli-linux-arm64
             build_args: --platform linux/arm64
-          - os: macos-latest
+          - os: macos-12 
             artifact_name: example-cli-darwin-amd64
             asset_name: example-cli-darwin-amd64
-          - os: windows-latest
+          - os: windows-2019 
             artifact_name: example-cli-windows-amd64.exe
             asset_name: example-cli-windows-amd64.exe
 
