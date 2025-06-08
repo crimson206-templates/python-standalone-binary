@@ -1,4 +1,11 @@
-# Create Cross-Platform Python CLI Tools Without Python
+---
+title: Create Cross-Platform Python CLI Tools Without Python
+published: false
+description: A simple test article
+tags: 'productivity, beginners, test'
+cover_image: ./assets/cat.jpg
+canonical_url: null
+---
 
 *A practical guide to distributing Python applications as standalone executables*
 
@@ -20,10 +27,10 @@ We've created a template that handles all the complexity for you. Your users jus
 
 ```bash
 # Linux/macOS
-curl -fsSL https://raw.githubusercontent.com/user/repo/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/{user}/{repo}/main/install.sh | bash
 
 # Windows
-irm https://raw.githubusercontent.com/user/repo/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/user/{user}/{repo}/install.ps1 | iex
 ```
 
 That's it. No Python required.
