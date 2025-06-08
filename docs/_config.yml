@@ -1,0 +1,4 @@
+theme: jekyll-theme-minimal
+title: Python CLI Distribution Guide
+description: A guide to distributing Python CLI tools as standalone executables
+show_downloads: false 
