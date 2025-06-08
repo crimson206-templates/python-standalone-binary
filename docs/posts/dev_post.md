@@ -11,6 +11,8 @@ canonical_url: null
 
 ---
 
+test-changed content
+
 Have you ever created a useful Python CLI tool but struggled to share it with non-Python users? Here's a solution that doesn't require explaining pip installation or Python version compatibility to your end users.
 
 ## What We're Solving
