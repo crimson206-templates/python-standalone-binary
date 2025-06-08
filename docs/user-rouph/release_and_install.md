@@ -2,6 +2,8 @@
 
 The [release](/.github/workflows/release.yml) workflow generates installation packages for different operating systems.
 
+If you uses the [tagging.sh](/scripts/tagging.sh) script, it will push the v0.1.0 tag automatically, and the workflow automatically runs as well.
+
 ## Installation
 
 The [install](/scripts/install.sh) script works in conjunction with the release workflow.

@@ -1,39 +1,52 @@
 # Python Standalone Binary Template
 
-Create cross-platform standalone executables from Python scripts. No Python installation required for end users.
+A template for creating standalone executables from Python CLI applications. The executables run without requiring Python installation.
 
 ## Quick Start
 
-### Install
 ```bash
-# Linux / macOS
-curl -fsSL https://raw.githubusercontent.com/crimson206-templates/python-standalone-binary/main/scripts/install.sh | bash
+# Run with Python
+pip install -e .
+example-cli
 
-# Windows (PowerShell)
+# Build standalone executable
+source scripts/build.sh
+dist/example-cli
+```
+
+## Installation
+
+### Linux / macOS
+```bash
+curl -fsSL https://raw.githubusercontent.com/crimson206-templates/python-standalone-binary/main/scripts/install.sh | bash
+```
+
+### Windows (PowerShell)
+```powershell
 irm https://raw.githubusercontent.com/crimson206-templates/python-standalone-binary/main/scripts/install.ps1 | iex
 ```
 
-See [Installation Guide](/docs/installation.md) for more options.
-
 ## Documentation
 
+For detailed information, see:
+- [Overview](/docs/user-rouph/overview.md)
+- [Dependencies](/docs/user-rouph/dependencies.md)
+- [Local Testing](/docs/user-rouph/local_test.md)
+- [Release Process](/docs/user-rouph/release_and_install.md)
+- [Compatibility Notes](/docs/user-rouph/compatibility.md)
+
+Additional guides:
 - [Development Guide](/docs/development.md)
 - [Installation Guide](/docs/installation.md)
 - [Troubleshooting](/docs/troubleshooting.md)
 
-### Additional Information
-- [Dependencies](/docs/user-rouph/dependencies.md)
-- [Compatibility Notes](/docs/user-rouph/compatibility.md)
-- [Local Testing](/docs/user-rouph/local_test.md)
-- [Release Process](/docs/user-rouph/release_and_install.md)
-
 ## Features
 
-- Cross-platform support (Linux, Windows, macOS)
 - Single executable output
-- No Python runtime required
-- Automatic platform detection
-- Easy installation process
+- Cross-platform support (Linux, Windows, macOS)
+- No Python installation required
+- Automated release process
+- Easy installation scripts
 
 ## License
 
