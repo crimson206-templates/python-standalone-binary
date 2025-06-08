@@ -3,7 +3,7 @@ title: Standalone Python CLI Distribution Made Simple
 published: false
 description: Learn how to distribute Python CLI tools as standalone executables - no Python installation required for end users. A practical template for cross-platform binary distribution.
 tags: 'python, cli, devops, tutorial'
-cover_image: ../static/python.png
+cover_image: ../static/python2.png
 canonical_url: null
 id: 2576404
 ---
