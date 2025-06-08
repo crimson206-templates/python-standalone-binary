@@ -6,6 +6,7 @@ tags: 'python, cli, devops, tutorial'
 cover_image: ../static/python2.png
 canonical_url: null
 id: 2576404
+date: '2025-06-08T18:33:22Z'
 ---
 
 Want to share your Python CLI tool with non-technical users? Let's make it simple - no Python installation required!
