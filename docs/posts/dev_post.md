@@ -5,6 +5,7 @@ description: A simple test article
 tags: 'productivity, beginners, test'
 cover_image: ../static/python.png
 canonical_url: null
+id: 2576255
 ---
 
 *A practical guide to distributing Python applications as standalone executables*
