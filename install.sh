@@ -7,7 +7,8 @@ set -e
 BINARY_NAME="example-cli"
 GITHUB_USER="crimson206-templates"
 GITHUB_REPO="python-standalone-binary"
-INSTALL_DIR="/usr/local/bin"
+DEFAULT_INSTALL_DIR="/usr/local/bin"
+INSTALL_DIR="${INSTALL_DIR:-$DEFAULT_INSTALL_DIR}"
 
 # Detect OS and architecture
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
@@ -26,8 +27,18 @@ case ${ARCH} in
         ;;
 esac
 
-# Construct binary name with OS and architecture
-BINARY_FILENAME="${BINARY_NAME}-${OS}-${ARCH}"
+# Add file extension based on OS
+case ${OS} in
+    windows)
+        EXT=".exe"
+        ;;
+    *)
+        EXT=""
+        ;;
+esacAA
+
+# Construct binary name with OS and architectureW
+BINARY_FILENAME="${BINARY_NAME}-${OS}-${ARCH}${EXT}"
 
 # Create temporary directory
 TMP_DIR=$(mktemp -d)
@@ -47,14 +58,24 @@ echo "Downloading ${BINARY_NAME}..."
 
 # Download binary from GitHub releases
 DOWNLOAD_URL="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${BINARY_FILENAME}"
-curl -fsSL "${DOWNLOAD_URL}" -o "${BINARY_NAME}"
+echo "Downloading from: ${DOWNLOAD_URL}"
+
+if ! curl -fsSL "${DOWNLOAD_URL}" -o "${BINARY_NAME}"; then
+    echo "Error: Failed to download binary from ${DOWNLOAD_URL}"
+    exit 1
+fi
 
 # Make binary executable
 chmod +x "${BINARY_NAME}"
 
-# Move binary to installation directory
-echo "Installing to ${INSTALL_DIR}..."
-sudo mv "${BINARY_NAME}" "${INSTALL_DIR}/"
+# Check if we can write to INSTALL_DIR directly
+if [ -w "${INSTALL_DIR}" ]; then
+    mv "${BINARY_NAME}" "${INSTALL_DIR}/"
+else
+    # Try with sudo if we don't have write permission
+    echo "Installing to ${INSTALL_DIR} (requires sudo)..."
+    sudo mv "${BINARY_NAME}" "${INSTALL_DIR}/"
+fi
 
 # Clean up
 cd - > /dev/null
