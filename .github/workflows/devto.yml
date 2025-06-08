@@ -16,6 +16,9 @@ on:
     tags:
       - 'devto-*'  # devto-v1.0, devto-20240608
 
+permissions:
+  contents: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
